@@ -42,7 +42,7 @@
           </v-flex>
 
           <v-flex xs12 class="pb-0">
-            <v-autocomplete
+            <v-select
               v-model="filterStatus"
               :items="statusList"
               small-chips
@@ -75,7 +75,6 @@
             <v-autocomplete
               v-model="filterService"
               :items="currentServices"
-              small-chips
               :menu-props="{ maxHeight: '400' }"
               :placeholder="$t('AllServices')"
               :label="$t('Service')"
@@ -88,10 +87,9 @@
           </v-flex>
 
           <v-flex xs12 class="pb-0">
-            <v-autocomplete
+            <v-select
               v-model="filterGroup"
               :items="currentGroups"
-              small-chips
               :menu-props="{ maxHeight: '400' }"
               :placeholder="$t('AllGroups')"
               :label="$t('Group')"

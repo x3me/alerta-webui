@@ -35,6 +35,7 @@ export interface IIncident {
   snoozeTime?: number
   history: any[]
 
+  alertSeverity?: string
   alerts: string[] // alert ids
   lastReceiveTime?: string
 

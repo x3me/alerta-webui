@@ -379,7 +379,7 @@ export default Vue.extend({
         .finally(() => {
           if (this.timer) clearTimeout(this.timer)
           this.timer = setTimeout(
-            () => this.refreshAlerts(),
+            this.refreshAlerts,
             this.refreshInterval
           )
         })

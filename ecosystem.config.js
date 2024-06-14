@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'alerta-webui',
       script: 'yarn',
-      args: 'dev'
+      args: 'serve'
     }
   ]
 }

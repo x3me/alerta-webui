@@ -24,13 +24,13 @@
       <v-sheet
         v-for="incident in items"
         :key="incident.id"
-        class="incident-row"
+        :class="`incident-row severity-${incident.alertSeverity}`"
         :color="rowColour"
         tabindex="0"
         @click="open(incident.id)"
       >
         <span class="label">{{ incident.status | capitalize }}</span>
-        <span :class="`label label-${incident.severity.toLowerCase()}`">
+        <span :class="`label label-${incident.severity}`">
           {{ incident.severity | capitalize }}
         </span>
         <date-format
@@ -246,7 +246,8 @@ export default Vue.extend({
   },
   computed: {
     rowColour() {
-      return `grey ${this.$vuetify.theme.dark ? 'darken-3' : 'lighten-3'}`
+      return ''
+      // return `grey ${this.$vuetify.theme.dark ? 'darken-3' : 'lighten-3'}`
     },
     loading() {
       return this.$store.state.incidents.isLoading
@@ -359,6 +360,11 @@ export default Vue.extend({
 
   .label {
     width: max-content;
+  }
+
+  &.severity-cleared {
+    padding-left: 0.5rem;
+    border-left: 8px solid var(--v-success-base);
   }
 }
 

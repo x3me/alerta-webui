@@ -3,14 +3,14 @@ name: Release
 on:
   push:
     tags:
-      - "*.*.*"
+      - '*.*.*'
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 16
           cache: yarn
@@ -26,10 +26,10 @@ jobs:
 
   release:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 16
           cache: yarn
@@ -42,7 +42,8 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "alerta-webui.zip,tar.gz"
+          artifacts: 'alerta-webui.zip,tar.gz'
           token: ${{ secrets.GITHUB_TOKEN }}
           draft: false
           prerelease: false
+          allowUpdates: true

@@ -137,6 +137,13 @@
                 </v-flex>
                 <v-flex xs12 sm6 md12>
                   <v-text-field
+                    v-model.trim="editedItem.attributes.telegramId"
+                    clearable
+                    :label="$t('Telegram ID')"
+                  />
+                </v-flex>
+                <v-flex>
+                  <v-text-field
                     v-model.trim="editedItem.text"
                     :label="$t('Comment')"
                   />
@@ -319,9 +326,9 @@
 </template>
 
 <script>
+import i18n from '@/plugins/i18n'
 import DateFormat from './lib/DateFormat.vue'
 import ListButtonAdd from './lib/ListButtonAdd.vue'
-import i18n from '@/plugins/i18n'
 
 export default {
   components: {
@@ -374,7 +381,8 @@ export default {
       password: '',
       confirmPassword: '',
       roles: [],
-      text: ''
+      text: '',
+      attributes: {}
     },
     showPassword: false,
     rules: {
@@ -512,7 +520,11 @@ export default {
             status: this.editedItem.status,
             roles: this.editedItem.roles,
             text: this.editedItem.text,
-            email_verified: this.editedItem.email_verified
+            email_verified: this.editedItem.email_verified,
+            attributes: {
+              ...this.editedItem.attributes,
+              telegramId: this.editedItem.attributes.telegramId || null
+            }
           }
         ])
         if (this.editedGroups) {
@@ -536,7 +548,13 @@ export default {
           )
         }
       } else {
-        this.$store.dispatch('users/createUser', this.editedItem)
+        this.$store.dispatch('users/createUser', {
+          ...this.editedItem,
+          attributes: {
+            ...this.editedItem.attributes,
+            telegramId: this.editedItem.attributes.telegramId || null
+          }
+        })
       }
       this.close()
     }

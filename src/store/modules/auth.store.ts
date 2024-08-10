@@ -1,7 +1,7 @@
 import AuthApi from '@/services/api/auth.service'
 import { IAuth, IStore } from '@/store/interfaces'
-import { VueAuthenticate } from '@alerta/vue-authenticate'
 import * as Sentry from '@sentry/vue'
+import VueAuthenticate from 'vue-authenticate'
 import { Module } from 'vuex'
 
 export const makeAuthStore = (

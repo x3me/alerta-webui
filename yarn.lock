@@ -5,23 +5,6 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@alerta/vue-authenticate@github:alerta/vue-authenticate":
-  version: 1.5.0
-  resolution: "@alerta/vue-authenticate@https://github.com/alerta/vue-authenticate.git#commit=ff6de656aa1929f242d8fa3ab4afae72c808fffa"
-  dependencies:
-    acorn: "npm:^6.1.1"
-    ajv: "npm:^8.1.0"
-    axios: "npm:^0.21.1"
-    vue: "npm:^2.6.10"
-    vue-axios: "npm:^2.1.4"
-  peerDependencies:
-    acorn: ^6.0.0
-    acorn-dynamic-import: ^4.0.0
-    ajv: ^6.9.1
-  checksum: 10c0/176d3442549ab0bc92c4239c86140de975c52fc199a0c6bab1eb701cd0e8b9f8cde71c22b973160691ccbda0292a66060b2a34e0adbdc7cb2ccc4d8429bd3cf0
-  languageName: node
-  linkType: hard
-
 "@ampproject/remapping@npm:^2.1.0":
   version: 2.1.2
   resolution: "@ampproject/remapping@npm:2.1.2"
@@ -1772,7 +1755,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^6.0.0, acorn@npm:^6.1.1":
+"acorn@npm:^6.0.0":
   version: 6.4.2
   resolution: "acorn@npm:6.4.2"
   bin:
@@ -1839,23 +1822,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^8.1.0":
-  version: 8.10.0
-  resolution: "ajv@npm:8.10.0"
-  dependencies:
-    fast-deep-equal: "npm:^3.1.1"
-    json-schema-traverse: "npm:^1.0.0"
-    require-from-string: "npm:^2.0.2"
-    uri-js: "npm:^4.2.2"
-  checksum: 10c0/cc2c02a89289420ea96720f728d39d4d19dbcb2c1d0363481d0a9973282b69d94c8c1a02f4c424a89a1bd888e6049f87d0f82d21b5d056546cdbb364dd043f23
-  languageName: node
-  linkType: hard
-
 "alerta-webui@workspace:.":
   version: 0.0.0-use.local
   resolution: "alerta-webui@workspace:."
   dependencies:
-    "@alerta/vue-authenticate": "github:alerta/vue-authenticate"
     "@mdi/font": "npm:^6.5.95"
     "@rushstack/eslint-patch": "npm:^1.1.0"
     "@sentry/tracing": "npm:^6.18.2"
@@ -1895,6 +1865,7 @@ __metadata:
     vite-plugin-package-version: "npm:^1.0.2"
     vite-plugin-vue2: "npm:1.9.3"
     vue: "npm:^2.6.14"
+    vue-authenticate: "npm:^1.5.0"
     vue-i18n: "npm:^8.26.7"
     vue-property-decorator: "npm:^7.3.0"
     vue-router: "npm:^3.5.3"
@@ -2048,12 +2019,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.1":
-  version: 0.21.4
-  resolution: "axios@npm:0.21.4"
+"axios@npm:^0.18.0":
+  version: 0.18.1
+  resolution: "axios@npm:0.18.1"
   dependencies:
-    follow-redirects: "npm:^1.14.0"
-  checksum: 10c0/fbcff55ec68f71f02d3773d467db2fcecdf04e749826c82c2427a232f9eba63242150a05f15af9ef15818352b814257541155de0281f8fb2b7e8a5b79f7f2142
+    follow-redirects: "npm:1.5.10"
+    is-buffer: "npm:^2.0.2"
+  checksum: 10c0/13d86542ad3e1de286a6262213b1cd62654307d89617bef5015e82aad389408c6f66bafa1e467b80af971cfe5ac5ed0b40a250f682f46ab9a1487060f0b6b661
   languageName: node
   linkType: hard
 
@@ -2633,6 +2605,15 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10c0/31873df69ff7036ce4f4158dcd6f71cd399b834ab1efbf23383f660822d28c7e29442fa83d34ccdd2f5201ff69eb494f0c7e8c01ecd314f0207bb631bb048ac0
+  languageName: node
+  linkType: hard
+
+"debug@npm:=3.1.0":
+  version: 3.1.0
+  resolution: "debug@npm:3.1.0"
+  dependencies:
+    ms: "npm:2.0.0"
+  checksum: 10c0/5bff34a352d7b2eaa31886eeaf2ee534b5461ec0548315b2f9f80bd1d2533cab7df1fa52e130ce27bc31c3945fbffb0fc72baacdceb274b95ce853db89254ea4
   languageName: node
   linkType: hard
 
@@ -3531,13 +3512,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.0":
-  version: 1.14.9
-  resolution: "follow-redirects@npm:1.14.9"
-  peerDependenciesMeta:
-    debug:
-      optional: true
-  checksum: 10c0/08c465c17cbf3011ad16516609ee476abffa8fd1ff78c2082f1ff43614cb06586a0ccc8e99e5ebe13da06d064367cb269789e3ca0e93e2ad5b24fdc30b4294b6
+"follow-redirects@npm:1.5.10":
+  version: 1.5.10
+  resolution: "follow-redirects@npm:1.5.10"
+  dependencies:
+    debug: "npm:=3.1.0"
+  checksum: 10c0/f56ca26dcf3c9996a6cf8868b61e369a35d4000ade0292bdd27b5e0934902681b037060b9fabe58e7042bb8b85166d5db8bbcf027f1825c1577e4cffd904fd3f
   languageName: node
   linkType: hard
 
@@ -4061,6 +4041,13 @@ __metadata:
   version: 1.1.6
   resolution: "is-buffer@npm:1.1.6"
   checksum: 10c0/ae18aa0b6e113d6c490ad1db5e8df9bdb57758382b313f5a22c9c61084875c6396d50bbf49315f5b1926d142d74dfb8d31b40d993a383e0a158b15fea7a82234
+  languageName: node
+  linkType: hard
+
+"is-buffer@npm:^2.0.2":
+  version: 2.0.5
+  resolution: "is-buffer@npm:2.0.5"
+  checksum: 10c0/e603f6fced83cf94c53399cff3bda1a9f08e391b872b64a73793b0928be3e5f047f2bcece230edb7632eaea2acdbfcb56c23b33d8a20c820023b230f1485679a
   languageName: node
   linkType: hard
 
@@ -4886,13 +4873,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-schema-traverse@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "json-schema-traverse@npm:1.0.0"
-  checksum: 10c0/71e30015d7f3d6dc1c316d6298047c8ef98a06d31ad064919976583eb61e1018a60a0067338f0f79cabc00d84af3fcc489bd48ce8a46ea165d9541ba17fb30c6
-  languageName: node
-  linkType: hard
-
 "json-stable-stringify-without-jsonify@npm:^1.0.1":
   version: 1.0.1
   resolution: "json-stable-stringify-without-jsonify@npm:1.0.1"
@@ -5293,6 +5273,13 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: 10c0/46ea0f3ffa8bc6a5bc0c7081ffc3907777f0ed6516888d40a518c5111f8366d97d2678911ad1a6882bf592fa9de6c784fea32e1687bb94e1f4944170af48a5cf
+  languageName: node
+  linkType: hard
+
+"ms@npm:2.0.0":
+  version: 2.0.0
+  resolution: "ms@npm:2.0.0"
+  checksum: 10c0/f8fda810b39fd7255bbdc451c46286e549794fcc700dc9cd1d25658bbc4dc2563a5de6fe7c60f798a16a60c6ceb53f033cb353f493f0cf63e5199b702943159d
   languageName: node
   linkType: hard
 
@@ -5969,13 +5956,6 @@ __metadata:
   version: 2.1.1
   resolution: "require-directory@npm:2.1.1"
   checksum: 10c0/83aa76a7bc1531f68d92c75a2ca2f54f1b01463cb566cf3fbc787d0de8be30c9dbc211d1d46be3497dac5785fe296f2dd11d531945ac29730643357978966e99
-  languageName: node
-  linkType: hard
-
-"require-from-string@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "require-from-string@npm:2.0.2"
-  checksum: 10c0/aaa267e0c5b022fc5fd4eef49d8285086b15f2a1c54b28240fdf03599cbd9c26049fee3eab894f2e1f6ca65e513b030a7c264201e3f005601e80c49fb2937ce2
   languageName: node
   linkType: hard
 
@@ -6999,6 +6979,17 @@ __metadata:
     vscode-pug-languageservice: "npm:0.31.4"
     vscode-typescript-languageservice: "npm:0.31.4"
   checksum: 10c0/369bc612968ca8ec2ada28a4f7b5ba56dee758503bacabcd4a588d5e2cc4f46e7ef49a4cb40d6957a701ee58741c1a560c77cec9b0c14fefb6e496d4659b486a
+  languageName: node
+  linkType: hard
+
+"vue-authenticate@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "vue-authenticate@npm:1.5.0"
+  dependencies:
+    axios: "npm:^0.18.0"
+    vue: "npm:^2.6.10"
+    vue-axios: "npm:^2.1.4"
+  checksum: 10c0/fb60b9157503491205fb2f95ef4f0a6ee1fc8a02c1f7791527571bab75d21d633c7bf797c6144220ed6cfc65ac62ae0dc7b23332a26861ebb9bf9abb1f3ed578
   languageName: node
   linkType: hard
 

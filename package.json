@@ -33,7 +33,6 @@
   ],
   "packageManager": "yarn@4.4.0",
   "dependencies": {
-    "@alerta/vue-authenticate": "github:alerta/vue-authenticate",
     "@sentry/tracing": "^6.18.2",
     "@sentry/vue": "^6.18.2",
     "@vue/runtime-dom": "^3.2.47",
@@ -45,6 +44,7 @@
     "luxon": "^2.3.1",
     "uuid": "^8.3.2",
     "vue": "^2.6.14",
+    "vue-authenticate": "^1.5.0",
     "vue-i18n": "^8.26.7",
     "vue-property-decorator": "^7.3.0",
     "vue-router": "^3.5.3",

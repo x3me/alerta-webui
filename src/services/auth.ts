@@ -1,7 +1,7 @@
 import api from '@/services/api'
 import { IConfig } from '@/store/interfaces'
-import { VueAuthenticate } from '@alerta/vue-authenticate'
 import Vue from 'vue'
+import VueAuthenticate from 'vue-authenticate'
 import VueAxios from 'vue-axios'
 import Vuex from 'vuex'
 

@@ -1,6 +1,6 @@
 {
   "name": "alerta-webui",
-  "version": "8.12.0",
+  "version": "8.14.0",
   "private": true,
   "description": "Alerta web UI",
   "scripts": {
@@ -31,6 +31,7 @@
     "last 2 versions",
     "not ie <= 11"
   ],
+  "packageManager": "yarn@4.4.0",
   "dependencies": {
     "@alerta/vue-authenticate": "github:alerta/vue-authenticate",
     "@sentry/tracing": "^6.18.2",

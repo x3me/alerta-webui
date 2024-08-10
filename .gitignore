@@ -27,3 +27,11 @@ yarn-error.log*
 # packaged app
 alerta-webui.tar.gz
 alerta-webui.zip
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

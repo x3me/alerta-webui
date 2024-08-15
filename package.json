@@ -5,7 +5,7 @@
   "description": "Alerta web UI",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && rimraf dist/config.json.example",
+    "build": "vite build && rm -rf dist/config.json.example",
     "serve": "vite preview",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
@@ -15,17 +15,6 @@
     "test:unit": "echo \"Error: no unit tests specified\" && exit 0",
     "package": "yarn build && tar -czf alerta-webui.tar.gz dist && zip -rq alerta-webui.zip dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/x3me/alerta-webui.git"
-  },
-  "keywords": [
-    "alerta",
-    "monitoring",
-    "webui"
-  ],
-  "author": "satterly",
-  "license": "Apache-2.0",
   "browserslist": [
     "> 1%",
     "last 2 versions",
